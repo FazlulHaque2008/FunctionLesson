@@ -1,0 +1,347 @@
+#Function
+#Complete the function  f  so that it returns the product of  a  and  b  , use the next cell to test the function
+def f(a, b):
+    c = a * b
+    return c
+
+#Test the function using assigned values to a, b
+a = 3
+b = 2
+if ((a * b) ==f(a,b)):
+    print("Correct")
+else:
+    print(incorrect)
+
+def printX():
+    print("<-\t<-\t<-\t\t-\t\t-\t\t-\t\t-\t\t-\t\t-\t\t-\t\t-\t\t-\t\t-\t\t-\t\t-\t\t-\t\t->\t->\t->")
+
+printX()
+#Complete the function  g  such that the input  c  is a list of integers and the output is the sum of all the
+# elements in the list
+def g(c):
+    return sum(c)
+
+c = [1, 2, 3]
+print(sum(c))
+if sum(c) == g(c):
+    print("correct")
+else:
+    print("incorrect")
+printX()
+#What is the value of c after the following block of code is run ?
+a = 1
+def add(b):
+    return(a+b)
+
+c = add(10)
+print(c)
+printX()
+#What value will be returned after the following block of code is run?
+def f(c):
+    return sum(c)
+
+c = (1, 2, 3)
+print(f(c))
+
+#Functions
+#A function is a reusable block of code which performs operations specified in the function. They let you break down
+# tasks and allow you to reuse your code in different programs.
+#There are two types of functions :
+    #Pre-defined functions
+    #User defined functions
+#What is a Function?
+#You can define functions to provide the required functionality. Here are simple rules to define a function in Python:
+#Functions blocks begin def followed by the function name and parentheses ().
+#There are input parameters or arguments that should be placed within these parentheses.
+#You can also define parameters inside these parentheses.
+#There is a body within every function that starts with a colon (:) and is indented.
+#You can also place documentation before the body.
+#The statement return exits a function, optionally passing back a value.
+#An example of a function that adds on to the parameter a prints and returns the output as b:
+printX()
+# First function example: Add 1 to a and store as b
+def add(a):
+    b = a + 1
+    print("if you add one with", a, "it will return", b)
+    return (b)
+
+#call the function by name
+c = add(5)
+print(c)
+# we can pass argument to the function
+a = 10
+if (a - 1) == add(a):
+    print("it is correct!")
+else:
+    print("it is incorrect???")
+#help(add)
+printX()
+#We can create different functions. For example, we can create a function that multiplies two numbers. The numbers
+# will be represented by the variables a and b:
+# Define a function for multiple two numbers
+def Mult(a, b):
+    c = a * b
+    return (c)
+    print("This will not be printed")
+#call Mult fuction with two int variables
+result = Mult(3,5)
+print(result)
+#call function with 2 floats variables
+result = Mult(10.0, 3.14)
+print("Product by float:",result)
+#call fuction with 2 different types of variabl
+result = Mult(2, " Michael Jackson")
+print("Function with 2 different types of variables:", result)
+printX()
+#Variables
+#The input to a function is called a formal parameter.
+#A variable that is declared inside a function is called a local variable. The parameter only exists within the
+# function (i.e. the point where the function starts and stops).
+#A variable that is declared outside a function definition is a global variable, and its value is accessible and
+# modifiable throughout the program.
+#Function definition
+def square(a): #(a) - Formal parameter
+    #Local veriable b
+    b = 1
+    c = a * a + b
+    print(a, "if you square + 1 =", c)
+    return(c)
+
+#call the square function with a parameter (3)
+x = 3 # initializes Global variable x = 3
+y = square(3)
+print(y)
+#We can call the function with an input of 2 in a different manner:
+# Directly enter a number as parameter
+square(2)
+printX()
+#Define function , one with return value of "NONE" and one with return value
+def MJ():
+    print("Michael Jackson")
+
+def MJ1():
+    print("Michael Jackson")
+    return (None)
+#call the function to see out put
+MJ()
+printX()
+MJ1()
+printX()
+#define a function for combining strings
+def con(p, q):
+    return (p + q)
+z = con("This ", "is"  )
+print("After combining:", z)
+printX()
+#Functions Make Things Simple
+#Consider the two lines of code in Block 1 and Block 2: the procedure for each block is identical. The only thing
+# that is different is the variable names and values.
+#a and b calculation block1
+a1 = 4
+b1 = 5
+c1 = a1 + b1 + 2 * a1 * b1 - 1
+#print(c1)
+if(c1 < 0):
+    c1 = 0
+else:
+    c1 = 5
+print("print c1:", c1)
+
+#a and b calculation block2
+a2 = 0
+b2 = 0
+c2 = a2 + b2 + 2 * a2 * b2 - 1
+if(c2 < 0):
+    c2 = 0
+else:
+    c2 = 5
+print("print c2:", c2)
+
+#make a function for above to avoid so many lines of code
+def Equation(a, b):
+    c = a + b + 2 * a * b - 1
+    if(c < 0):
+        c = 0
+    else:
+        c = 5
+        return (c)
+
+#now call the fuction with variables
+a1 = 4
+b1 = 5
+c1 = Equation(a1, b1)
+print("c1 with function:", c1)
+
+a2 = 0
+b2 = 0
+c2 = Equation(a2, b2)
+print("b2 with the help of function:", c2)
+printX()
+# Pre-defined functions
+# #There are many pre-defined functions in Python, so let's start with the simple ones.
+#The print() function
+#built in print() function
+album_ratings = [10.0, 8.5, 9.5, 7.0, 7.0, 9.5, 9.0, 9.5]
+print("Print Function() for Album Ratings:", album_ratings)
+#use sum() function to add every element on a list or tuple together
+print("Sum() Function for the The sum of Album Ratings:", sum(album_ratings))
+#len function
+l = len(album_ratings)
+print("Built in len() function to find out the length of List, Tuple or string:", l)
+printX()
+# Using if/else Statements and Loops in Functions
+# The return() function is particularly useful if you have any IF statements in the function, when you want your
+# output to be dependent on some condition
+#function using if, else condition
+def type_of_album(artist, album, year_released):
+    print(artist, album, year_released)
+    if(year_released > 1980):
+        return "Modern"
+    else:
+        return "Oldie"
+
+x = type_of_album("Michael Jackson", "Moon Walk", 1978)
+print(x)
+printX()
+#We can use a loop in a function. For example, we can print out each element in a list
+#print the list using for loop
+def PrintList(the_list):
+    for element in the_list:
+        print(element)
+
+#call the function
+PrintList(["1", 1, "the man", "abc"])
+printX()
+#Setting default argument values in your custom functions
+#You can set a default value for arguments in your function. For example, in the isGoodRating() function,
+# what if we wanted to create a threshold for what we consider to be a good rating? Perhaps by default,
+# we should have a default rating of 4
+## Example for setting param with default value
+def isGoodRatings(rating=4):
+    if(rating < 7):
+        print("This album sucks, it's rating is:", rating)
+    else:
+        print("This rating is good, it's rating is:", rating)
+#test the rating with defalut value as set as 4
+#call the function with default valuse
+isGoodRatings()
+isGoodRatings(10)
+isGoodRatings(7)
+printX()
+
+#Collections and Functions
+#When the number of arguments are unknown for a function, They can all be packed into a tuple as shown
+def printAll(*args): #All the arguments are 'packed' into args which can be treated like a tuple
+    print("# of arguments:", len(args))
+    for argument in args:
+        print(argument)
+#printAll with 3 arguments
+printAll("Horsefeather", "Adonis", "Bone")
+#printAll with 4 arguments
+printAll("Sidecar", "Long Island", "Mudslide", "Carriage")
+printX()
+# Similarly, The arguments can also be packed into a dictionary as shown
+def printDictionary(**args):
+    for key in args:
+        print(key + " : "+ args[key])
+printDictionary(Country = "Canada", Province = "Ontario", City = "Sarnia")
+#Output
+#Country : Canada
+#Province : Ontario
+#City : Sarnia
+printX()
+#Functions can be incredibly powerful and versatile. They can accept (and return) data types, objects and even other
+# functions as arguements. Consider the example below
+def addItems(list):
+    list.append("Three")
+    list.append("Four")
+
+myList = ["One", "Two"]
+#call function
+addItems(myList)
+print(myList)
+
+printX()
+#Note how the changes made to the list are not limited to the functions scope. This occurs as it is the lists
+# reference that is passed to the function - Any changes made are on the orignal instance of the list. Therefore,
+# one should be cautious when passing mutable objects into functions.
+
+printX()
+#Quiz
+#1. Come up with a function that divides the first input by the second input
+def div(a, b):
+    return (a/b)
+
+print("the result is:", div(10, 5))
+
+#2. Can the con function we defined before be used to add two integers or strings?
+#Yes
+def con(a, b):
+    return(a + b)
+print("Can add 2 integer values(add 5 + 10):", con(5, 10))
+print("Can add 2 strings ( add Bill + Gates:", con("Bill ", "Gates"))
+
+#Can the con function we defined before be used to concatenate lists or tuples?
+print("Yes , you can concatenate two Tuples, concat (1, 2, 3) and (4, 5, 6):", con((1, 2, 3),(4, 5,6)))
+print("Yes, you can concatenate two Lists, concatenate [7, 8, 9] and [10, 11, 12]:", con([7, 8, 9], [10, 11, 12]))
+printX()
+# Probability Bag
+# You have been tasked with creating a lab that demonstrates the basics of probability by simulating a bag filled with
+# colored balls. The bag is represented using a dictionary called "bag", where the key represents the color of the ball
+# and the value represents the no of balls. The skeleton code has been made for you, do not add or remove any functions.
+# Complete the following functions -
+
+# fillBag - A function that packs it's arguments into a global dictionary "bag".
+# totalBalls - returns the total no of balls in the bucket
+# probOf - takes a color (string) as argument and returns probability of drawing the selected ball. Assume total balls
+# are not zero and the color given is a valid key.
+# probAll - returns a dictionary of all colors and their corresponding probability
+
+def fillBag(**balls):
+    global bag
+    bag = balls
+
+fillBag(red = 12, blue = 20, green =14, grey = 10, black = 28, yellow = 10)
+print(bag["red"])
+printX()
+def totalBalls():
+    total = 0
+    for color in bag:
+        total += bag[color]
+    return total
+    # alternatively
+    # return sum(bag.values())
+print("The total number of balls in the bag:", totalBalls())
+
+def probOfEachColor():
+    print("Probality of each color:")
+    for color in bag:
+        print(color, ":", bag[color]/totalBalls())
+        #print(key + " : " + color[key])
+
+    #return bag[color]/totalBalls()
+probOfEachColor()
+
+#print("Probability of balls:", probOf())
+
+def probOfOne(color):
+    return bag[color]/totalBalls()
+print("\nProbability of red ball:", probOfOne("red"))
+
+def probAll():
+    probDict = {}
+    for color in bag:
+        probDict[color] = probOfOne(color)
+    return probDict
+print("\nThe Bag dictionary with probability of each colered balls:", probAll())
+printX()
+b = 0
+c = 0
+for a in range (2, 5):
+    b += (a)
+    c = c + (a)
+    print(b, "\t", c)
+    #print("\t",c)
+
+printX()
+printX()
